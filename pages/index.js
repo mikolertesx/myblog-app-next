@@ -1,65 +1,48 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-
-export default function Home() {
+const Home = () => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <div>
+      <div className="p-4 block md:flex">
+        <div className="bg-green-800 p-2 flex-grow">
+          <h1 className="text-center text-6xl">Acerca de mi</h1>
+          <div>
+            <img src="/img/me.jpg" />
+          </div>
+          <p>Miguel Angel Guerrero Salinas</p>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        <div className="bg-blue-800 p-2 flex-grow">
+          <h1>Habilidades</h1>
+          <div className="grid grid-cols-1 md:grid-cols-3 overflow-visible">
+            <div>
+              <h2>Javascript</h2>
+              <p>Immutability vs mutability</p>
+              <p>Asynchronus Code</p>
+              <p>Data structures</p>
+              <p>Algorithms</p>
+            </div>
+            <div>
+              <h2>Node</h2>
+              <p>Server vs Client</p>
+              <p>Express</p>
+              <p>Electron</p>
+            </div>
+            <div>
+              <h2>React</h2>
+              <p>React Native</p>
+              <p>Redux</p>
+              <p>React Router</p>
+              <p>Next</p>
+            </div>
+            <div>
+              <h2>Vue</h2>
+              <p>Vuex</p>
+              <p>Nuxt</p>
+              <p>Tailwind</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
+
+export default Home;
